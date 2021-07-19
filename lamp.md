@@ -45,7 +45,7 @@ I installed all 3 packages by running:
 
 To confirm php version I ran `php -v`
 
-![php](images\php.png)
+![php](images/php.png)
 
 Configure a Virtual Host For My Website Using Apache
 The objective is to setup a domain called ‘projectlamp’
@@ -82,19 +82,19 @@ Entered the following command to to show the new file in the sites-available dir
 
 `sudo ls /etc/apache2/sites-available`
 
-![sitesavailable](images\sitesavailable.png)
+![sitesavailable](images/sitesavailable.png)
 
 Enabled the new virtual, by entering this command
 
 `sudo a2ensite projectlamp`
 
-![a2ensite](images\a2ensite.png)
+![a2ensite](images/a2ensite.png)
 
 I disabled the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
 
 `sudo a2dissite 000-default`
 
-![a2dissite](images\a2dissite.png)
+![a2dissite](images/a2dissite.png)
 
 To ensure my configuration file doesn’t contain syntax errors, run:
 
@@ -103,7 +103,7 @@ To ensure my configuration file doesn’t contain syntax errors, run:
 reloaded Apache so these changes take effect:
 `sudo systemctl reload apache2`
 
-![apache2ctl](images\apache2ctl.png)
+![apache2ctl](images/apache2ctl.png)
 
 Created an index.html file in that location so that i can test that the virtual host works as expected, by typing this command
 
@@ -147,4 +147,4 @@ Entered the following text inside the file:
 
 Saved and closed file and refreshed my EC2 public ip address url page
 
-![phpweb](images\phpweb.png)
+![phpweb](images/phpweb.png)
