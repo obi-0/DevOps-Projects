@@ -82,7 +82,7 @@ Entered the following command to to show the new file in the sites-available dir
 
 `sudo ls /etc/apache2/sites-available`
 
-![sites-available](images\sitesavailable.png)
+![sitesavailable](images\sitesavailable.png)
 
 Enabled the new virtual, by entering this command
 
@@ -147,4 +147,4 @@ Entered the following text inside the file:
 
 Saved and closed file and refreshed my EC2 public ip address url page
 
-![php-page](images\phpweb.png)
+![phpweb](images\phpweb.png)
