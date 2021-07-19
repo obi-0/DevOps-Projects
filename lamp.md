@@ -2,7 +2,7 @@
 
 Created my AWS account and performed the following tasks:
 
-• Signed into AWS and setup launched a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
+• Signed into AWS and setup a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
 • Saved my private key
 • Connected to my EC2 instance through MobaXterm SSH client.
 INSTALLED APACHE AND UPDATED THE FIREWALL
