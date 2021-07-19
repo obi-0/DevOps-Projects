@@ -1,6 +1,7 @@
 ## LAMP PROJECT
 
 Created my AWS account and performed the following tasks:
+
 • Signed into AWS and setup launched a new EC2 instance of t2.micro family with Ubuntu Server 20.04 LTS (HVM)
 • Saved my private key
 • Connected to my EC2 instance through MobaXterm SSH client.
@@ -9,6 +10,7 @@ INSTALLED APACHE AND UPDATED THE FIREWALL
 Install package update by running sudo apt update
 Installed apache by running command `sudo apt install apache2`
 Verified that apache2 is running by entering command `sudo systemctl status apache2`
+Screen shot below showing apache2 status
 
 ![status](images/status.png)
 
@@ -16,6 +18,7 @@ Opened TCP port 80 which is the default port that web browsers use to access web
 ![port80](images/port80.png)
 
 Verified that my web server is now correctly installed and accessible through my firewall. Opened my EC2 virtual machine public IP Address URL on my computer browser.
+Screen shot of the default page below.
 
 ![defaultpage](images/defaultpage.png)
 
@@ -40,17 +43,17 @@ Exit the MySQL console by typing `mysql> exit`
 PHP is the component of our setup that will process code to display dynamic content to the end user.
 In addition to the php package, my server will need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases.
 libapache2-mod-php will be required to enable Apache to handle PHP files. Core PHP packages will automatically be installed as dependencies.
-I installed all 3 packages by running:
+I installed all 3 packages by running the command below:
 `sudo apt install php libapache2-mod-php php-mysql`
 
 To confirm php version I ran `php -v`
 
 ![php](images/php.png)
 
-Configure a Virtual Host For My Website Using Apache
+I configured a Virtual Host For My Website Using Apache
 The objective is to setup a domain called ‘projectlamp’
 Apache on Ubuntu 20.04 has one server block enabled by default that is configured to serve documents from the /var/www/html directory.
-Created a directory for project LAMP - sudo mkdir /var/www/projectlamp
+I created a directory for project LAMP - sudo mkdir /var/www/projectlamp
 
 Assigned ownership of the directory with your current system user:
 `sudo chown -R $USER:$USER /var/www/projectlamp`
@@ -71,17 +74,18 @@ This created a new blank file. Pasted the following configuration by hitting the
 
 `</VirtualHost>`
 
-Saved and closed the file, by following the steps below:
+I saved and closed the file, as shown below:
 
 1. Hit the esc button on the keyboard
 2. Type :
 3. Type wq (w means write and q means quit)
 4. Hit ENTER to save the file
 
-Entered the following command to to show the new file in the sites-available directory
+I entered the following command to to show the new file in the sites-available directory
 
 `sudo ls /etc/apache2/sites-available`
 
+Screen shot showing the new file in the site-available directory
 ![sitesavailable](images/sitesavailable.png)
 
 Enabled the new virtual, by entering this command
@@ -94,9 +98,10 @@ I disabled the default website that comes installed with Apache. This is require
 
 `sudo a2dissite 000-default`
 
+Screen shot below showing Apache default website disabled
 ![a2dissite](images/a2dissite.png)
 
-To ensure my configuration file doesn’t contain syntax errors, run:
+To ensure my configuration file doesn’t contain syntax errors,i entered the command below:
 
 `sudo apache2ctl configtest`
 
@@ -117,7 +122,7 @@ Ran the command below to set my virtual host default web page when my public IP 
 
 I need to edit the /etc/apache2/mods-enabled/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
 
-Entered command
+Entered the command below
 
 `sudo vim /etc/apache2/mods-enabled/dir.conf`
 
@@ -130,7 +135,7 @@ Entered command
 
 `</IfModule>`
 
-Saved and closed the file.
+Saved and closed the file using vim editor.
 
 Reloaded apache2, so change can take effect
 sudo systemctl reload apache2
@@ -139,7 +144,7 @@ Created a PHP test script file known as ‘index.php’ to confirm that Apache i
 
 vim /var/www/projectlamp/index.php
 
-Entered the following text inside the file:
+I entered the text below inside the file:
 
 `<?php`
 
@@ -147,4 +152,5 @@ Entered the following text inside the file:
 
 Saved and closed file and refreshed my EC2 public ip address url page
 
+PHP default page screenshot
 ![phpweb](images/phpweb.png)
