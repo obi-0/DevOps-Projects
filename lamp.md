@@ -97,7 +97,6 @@ Enabled the new virtual, by entering this command
 I disabled the default website that comes installed with Apache. This is required if you’re not using a custom domain name, because in this case Apache’s default configuration would overwrite your virtual host. To disable Apache’s default website use a2dissite command , type:
 
 `sudo a2dissite 000-default`
-
 Screen shot below showing Apache default website disabled
 ![a2dissite](images/a2dissite.png)
 
