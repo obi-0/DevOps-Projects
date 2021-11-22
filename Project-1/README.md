@@ -1,4 +1,4 @@
-# LAMP_STACK
+# LAMP STACK IMPLEMENTATION
 
 LAMP STACK is a set of open source software used to develop web application.
 A web application requires an operating system, a web server, a database and a programming language to function efficently.
