@@ -5,10 +5,10 @@ A web application requires an operating system, a web server, a database and a p
 
 The programs i used for this project are:
 
-Linux - Operating system
-Apache - Web server
-MySQL - Database
-PHP - Programming language
+1. Linux - Operating system
+2. Apache - Web server
+3. MySQL - Database
+4. PHP - Programming language
 
 To complete this project, i created an AWS account, setup and configured an EC2 instance with Ubuntu Server 20.04 LTS (HVM).
 
