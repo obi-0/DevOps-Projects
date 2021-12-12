@@ -178,8 +178,7 @@ Test the installation.
 ![dcversion](images/dcversion.JPG)
 
 
-Create a file – tooling.yaml
-Enter the code below into the file to represent the application deployment
+Create a file – tooling.yaml and then enter the code below into the file to represent the application deployment
 
     version: "3.9"
 
@@ -244,7 +243,7 @@ Open URL http://localhost:8085 on a web browser
 
 Clone the php-todo repo https://github.com/obi-0/php-todo
 
-In the php-todo directory, write a Docker file for the php-todo app.
+In the php-todo directory, create a Dockerfile for the php-todo app.
 
     FROM php:7.4.24-apache
     LABEL Dare=dare@zooto.io
@@ -292,7 +291,7 @@ In the php-todo directory, write a Docker file for the php-todo app.
 
 ![start-apache](images/start-apache.JPG)
 
-Create a docker-compose.yml and enter the code below:
+Create a docker-compose.yml, then enter the code below:
 
     version: "3.9"
     services:
